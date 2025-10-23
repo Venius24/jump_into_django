@@ -1,0 +1,13 @@
+ <!-- product_list.html --> 
+ {% extends "base.html" %}
+  {% block content %}
+   <h1>{{ title }}</h1>
+   {% for product in products %}
+     <p>{{ product }}</p>
+   {% if forloop.last %}
+     <hr>
+   {% endif %}
+   {% empty %}
+     <p>Нет доступных товаров.</p>
+   {% endfor %} 
+  {% endblock %}

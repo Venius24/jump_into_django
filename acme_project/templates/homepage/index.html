@@ -1,0 +1,17 @@
+ <!-- index.html --> 
+ {% extends "base.html" %}
+ <!-- Имя блока — content, такое же, как в базовом шаблоне --> 
+ {% block content %}
+   <h1>{{ title }}</h1>
+   <p>Товар дня <strong>{{ promo_product }}</strong></p>
+
+   <a href="{% url 'catalog:product_list' %}">
+     Страница со списком товаров 
+   </a>
+
+    <br>
+
+   <a href="{% url 'catalog:product_detail' 1 %}">
+     Страница c товаром номер 1 
+   </a> 
+ {% endblock %}
